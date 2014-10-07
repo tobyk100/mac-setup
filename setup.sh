@@ -5,6 +5,9 @@ else
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+PATH="/usr/local/bin:$PATH"
+source ./.brew
+
 ###### Git Setup
 git config --global user.name "Toby"
 git config --global user.email tobyk100@gmail.com
@@ -14,9 +17,8 @@ echo "git name:" `git config --get user.name`
 echo "git email:" `git config --get user.email`
 
 
-gem install homesick
-homesick clone https://github.com/tobyk100/dotfiles.git
+###### Get home stuff
+echo $PATH
+sudo gem install homesick
+homesick clone tobyk100/dotfiles
 homesick symlink dotfiles
-source ./.brew
-
-npm install -g jshint
