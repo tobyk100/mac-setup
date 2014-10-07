@@ -6,6 +6,7 @@ fi
 
 git config --global user.name "Toby"
 git config --global user.email tobyk100@gmail.com
+git config --global push.default simple
 
 echo "git name:" `git config --get user.name`
 echo "git email:" `git config --get user.email`
