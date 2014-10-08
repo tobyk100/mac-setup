@@ -20,5 +20,5 @@ echo "git email:" `git config --get user.email`
 ###### Get home stuff
 echo $PATH
 sudo gem install homesick
-homesick clone tobyk100/dotfiles
+homesick clone --recursive tobyk100/dotfiles
 homesick symlink dotfiles
